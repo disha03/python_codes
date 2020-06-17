@@ -1,2 +1,2 @@
 # python_codes
-Beginning
+Basic programs of python to learn fundamental of pythons language.
