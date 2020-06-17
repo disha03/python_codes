@@ -1,0 +1,5 @@
+t=int(input()) #it takes no. of test cases
+for i in range(t):
+    n=int(input())     #no. of elements in list
+    lst=list(map(int,input().split(" "))) #it takes an input of line containing integers which is separated by the sapce " " 
+    print(lst)
