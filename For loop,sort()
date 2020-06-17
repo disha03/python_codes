@@ -1,0 +1,26 @@
+#"https://www.codechef.com/problems/COPS" question link
+t=int(input())
+for h in range(t):
+    c=0
+    a=0
+    n,x,y=map(int,input().split())           #three element input
+    lst=list(map(int,input().split()))
+    lst.sort()
+    k=x*y
+    for i in range(n):
+            if i>0:
+                if lst[i]-k>lst[i-1]+k:
+                    c=c+lst[i]-k-lst[i-1]-k-1
+            if i==n-1:
+                if lst[n-1]+k<100:
+                    c=c+100-lst[n-1]-k
+            if i==0:
+                if lst[0]-k>1:
+                    c=c+lst[0]-k-1
+
+    print(c)
+    lst.clear()
+    
+            
+        
+    
