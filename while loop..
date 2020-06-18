@@ -1,0 +1,9 @@
+#"https://www.codechef.com/problems/PPSUM"
+t=int(input())
+for i in range(t):
+    a,b=map(int,input().split())
+    while a>0 :
+        k=(b*(b+1))/2
+        b=k
+        a=a-1
+    print(int(k))
