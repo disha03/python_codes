@@ -1,0 +1,47 @@
+from collections import defaultdict as dd
+t=int(input())
+for i in range(t):
+    n=int(input())
+    z,x,y=dd(int),dd(int),dd(int)
+    m=[]
+    sum,suma,c,e,v=0,0,0,0,0
+    lsta=list(map(int,input().split()))
+    lstb=list(map(int,input().split()))
+    lsta.sort()
+    lstb.sort(reverse=True)
+    for j in range(n):
+        y[lsta[j]]+=1
+        z[lstb[j]]+=1
+        x[lsta[j]]+=1
+        x[lstb[j]]+=1
+    k=min(lsta[0],lstb[n-1])
+    for j in range(n):
+        if lsta[j]!=lstb[j]:
+            e+=1
+            break
+        else:
+            v+=1
+    if v==n:
+        print("0")
+        continue
+    if e==1 and n==1:
+        print("-1")
+        continue
+    e,v=0,0
+    for h in x.keys():
+        if x[h]%2!=0:
+            print("-1")
+            c+=1
+            break;
+    if c!=0:
+        continue
+    for o in x.keys():
+        a=abs((y.get(o,0))-(z.get(o,0)))//2
+        while a>0:
+            m.append(o);
+            a-=1
+    m.sort()
+    for j in range(len(m)//2):
+        h=min(2*k,m[j])
+        sum=sum+h
+    print(sum)
