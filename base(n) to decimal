@@ -1,0 +1,14 @@
+for _ in range(int(input())) :
+    n = input()
+    n=int(n,2)
+    if n%3==0:
+        print("1")
+    else:
+        print("0")
+        
+  if u want to convert given string or no.(in any base) to decimal,then use --int(string,base of the given string)--
+  here you want to convert string s of binary into decimal --int(n,1)--
+ **referthis link for this article
+  https://www.geeksforgeeks.org/python-int-function/
+ **refer this for question
+  https://practice.geeksforgeeks.org/problems/is-binary-number-multiple-of-3/0
