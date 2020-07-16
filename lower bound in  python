@@ -1,0 +1,29 @@
+The lower_bound() method in C++ is used to return an iterator pointing to the first element in the range [first, last) which has a value not less than val. This means that the 
+function returns the index of the next smallest number just greater than or equal to that number.
+If there are multiple values that are equal to val, lower_bound() returns the index of the first such value.In python bisect function se used for lower bound
+
+import bisect
+t=int(input())
+for i in range(t):
+    n,m=map(int,input().split())
+    lst=list(map(int,input().split()))
+    lst.sort()
+    k,c=0,0
+    h=bisect.bisect_left(lst, m)
+    for j in range(h-1,-1,-1):
+        l=m-lst[j]
+        while(l>=lst[k] and k<h-1):
+            if lst[k]==l:
+                c+=1;
+                break;
+            k+=1;
+        k=0
+        if c!=0:
+            break
+    if c!=0:
+        print("Yes")
+    else:
+        print("No")
+        
+**refer this link
+https://practice.geeksforgeeks.org/problems/key-pair/0
