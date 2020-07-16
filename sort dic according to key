@@ -1,0 +1,17 @@
+from collections import defaultdict as dd
+for _ in range(int(input())):
+    n=int(input())
+    c=0
+    m=dd(int)
+    lst=list(map(int,input().split()))
+    for i in range(n):
+        m[lst[i]]+=1
+    sorted(m.items(), key=lambda item: item[1])
+    for i in m.keys():
+        if m[i]>n/2:
+            print(i)
+            c+=1
+    if c==0:
+        print("-1")
+
+    
